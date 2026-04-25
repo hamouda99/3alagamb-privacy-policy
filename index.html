@@ -6,587 +6,445 @@
   <title>Privacy Policy — 3ala Gamb</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg:        #F7F4EF;
-      --surface:   #FFFFFF;
-      --ink:       #1A1714;
-      --ink-muted: #6B6560;
-      --accent:    #C4572A;
-      --accent-lt: #F0DDD4;
-      --rule:      #E2DDD7;
-      --mono:      'DM Sans', sans-serif;
-      --serif:     'Crimson Pro', Georgia, serif;
+      --grad: linear-gradient(135deg, #E5321B, #FC6030);
+      --brand-start: #E5321B;
+      --brand-end:   #FC6030;
+      --ink:         #111111;
+      --ink-muted:   #6B6B6B;
+      --rule:        #E8E8E8;
+      --bg:          #FFFFFF;
+      --surface:     #F9F9F9;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
       background: var(--bg);
       color: var(--ink);
-      font-family: var(--mono);
-      font-weight: 300;
+      font-family: 'Inter', system-ui, sans-serif;
       font-size: 15px;
-      line-height: 1.75;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
 
     /* ── HEADER ── */
     header {
-      background: var(--ink);
-      color: #fff;
-      padding: 56px 0 48px;
+      background: var(--grad);
+      padding: 52px 24px 44px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
     }
 
-    header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        repeating-linear-gradient(
-          90deg,
-          transparent,
-          transparent 39px,
-          rgba(255,255,255,.03) 39px,
-          rgba(255,255,255,.03) 40px
-        ),
-        repeating-linear-gradient(
-          0deg,
-          transparent,
-          transparent 39px,
-          rgba(255,255,255,.03) 39px,
-          rgba(255,255,255,.03) 40px
-        );
-      pointer-events: none;
-    }
-
-    .header-inner { position: relative; z-index: 1; }
-
-    .app-label {
+    .app-name {
       display: inline-block;
-      font-family: var(--mono);
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: .18em;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .12em;
       text-transform: uppercase;
-      color: var(--accent);
-      background: rgba(196, 87, 42, .12);
-      border: 1px solid rgba(196, 87, 42, .3);
-      padding: 4px 14px;
-      border-radius: 2px;
-      margin-bottom: 20px;
+      color: rgba(255,255,255,.75);
+      margin-bottom: 14px;
     }
 
     header h1 {
-      font-family: var(--serif);
-      font-weight: 300;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      line-height: 1.2;
-      letter-spacing: -.01em;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 600;
       color: #fff;
+      letter-spacing: -.02em;
+      line-height: 1.2;
     }
 
-    header h1 em {
-      font-style: italic;
-      color: rgba(255,255,255,.55);
-    }
-
-    .meta-row {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 28px;
-      flex-wrap: wrap;
-    }
-
-    .meta-row span {
-      font-size: 11px;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.4);
-    }
-
-    .meta-row span strong {
-      color: rgba(255,255,255,.75);
-      font-weight: 500;
+    .meta {
+      margin-top: 14px;
+      font-size: 12px;
+      color: rgba(255,255,255,.65);
     }
 
     /* ── LAYOUT ── */
     .wrapper {
-      max-width: 760px;
+      max-width: 700px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 24px 80px;
     }
 
     /* ── TOC ── */
-    .toc {
-      background: var(--surface);
-      border-left: 3px solid var(--accent);
-      padding: 28px 32px;
-      margin: 48px 0 0;
-      animation: fadeUp .5s ease both;
+    nav.toc {
+      margin: 40px 0 0;
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 24px 28px;
     }
 
-    .toc-title {
+    .toc-label {
       font-size: 10px;
-      letter-spacing: .18em;
+      font-weight: 600;
+      letter-spacing: .12em;
       text-transform: uppercase;
-      font-weight: 500;
       color: var(--ink-muted);
       margin-bottom: 14px;
     }
 
     .toc ol {
       list-style: none;
-      counter-reset: toc;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 6px 24px;
+      gap: 4px 24px;
     }
 
-    @media (max-width: 540px) {
-      .toc ol { grid-template-columns: 1fr; }
-    }
-
-    .toc li { counter-increment: toc; }
+    @media (max-width: 500px) { .toc ol { grid-template-columns: 1fr; } }
 
     .toc a {
-      text-decoration: none;
+      font-size: 13.5px;
       color: var(--ink);
-      font-size: 13px;
+      text-decoration: none;
       display: flex;
-      align-items: baseline;
+      align-items: center;
       gap: 8px;
+      padding: 4px 0;
       transition: color .15s;
     }
 
-    .toc a::before {
-      content: counter(toc, decimal-leading-zero);
-      font-size: 10px;
-      font-weight: 500;
-      color: var(--accent);
-      min-width: 20px;
-    }
+    .toc a:hover { color: var(--brand-start); }
 
-    .toc a:hover { color: var(--accent); }
+    .toc a .n {
+      font-size: 10px;
+      font-weight: 600;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      min-width: 18px;
+    }
 
     /* ── SECTIONS ── */
-    .section {
-      padding: 56px 0 0;
-      animation: fadeUp .5s ease both;
-    }
-
-    .section-number {
-      font-size: 10px;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      font-weight: 500;
-      color: var(--accent);
-      display: block;
-      margin-bottom: 8px;
-    }
+    .section { padding-top: 52px; }
 
     .section h2 {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-size: clamp(1.4rem, 3vw, 1.9rem);
-      line-height: 1.25;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -.01em;
       color: var(--ink);
-      padding-bottom: 16px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
       border-bottom: 1px solid var(--rule);
-      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h2 .num {
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .section h3 {
-      font-family: var(--mono);
       font-size: 11px;
-      font-weight: 500;
-      letter-spacing: .14em;
+      font-weight: 600;
+      letter-spacing: .1em;
       text-transform: uppercase;
       color: var(--ink-muted);
-      margin: 28px 0 12px;
+      margin: 24px 0 10px;
     }
 
-    .section p {
-      margin-bottom: 14px;
-      color: var(--ink);
-    }
+    .section p { margin-bottom: 12px; }
 
     .section ul {
       list-style: none;
-      margin: 12px 0 14px;
+      margin: 8px 0 12px;
     }
 
     .section ul li {
-      padding: 6px 0 6px 20px;
-      position: relative;
+      padding: 8px 0 8px 16px;
       border-bottom: 1px solid var(--rule);
+      position: relative;
+      font-size: 14.5px;
     }
 
     .section ul li::before {
-      content: '—';
+      content: '';
       position: absolute;
       left: 0;
-      color: var(--accent);
-      font-weight: 400;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--grad);
     }
 
     .section ul li:last-child { border-bottom: none; }
 
     /* ── TABLES ── */
-    .table-wrap { overflow-x: auto; margin: 16px 0; }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 13.5px;
+    .table-wrap {
+      overflow-x: auto;
+      margin: 12px 0;
+      border: 1px solid var(--rule);
+      border-radius: 8px;
     }
 
-    thead tr {
-      background: var(--ink);
-      color: #fff;
-    }
+    table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+
+    thead tr { background: var(--surface); }
 
     thead th {
       padding: 10px 16px;
       text-align: left;
-      font-weight: 500;
       font-size: 10px;
-      letter-spacing: .12em;
+      font-weight: 600;
+      letter-spacing: .1em;
       text-transform: uppercase;
-    }
-
-    tbody tr {
+      color: var(--ink-muted);
       border-bottom: 1px solid var(--rule);
-      transition: background .12s;
     }
 
-    tbody tr:hover { background: var(--accent-lt); }
-
-    tbody td {
-      padding: 12px 16px;
-      vertical-align: top;
-    }
-
+    tbody tr { border-bottom: 1px solid var(--rule); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody td { padding: 11px 16px; vertical-align: top; }
     tbody td:first-child { font-weight: 500; }
 
-    /* ── CALLOUTS ── */
+    /* ── CALLOUT ── */
     .callout {
-      background: var(--accent-lt);
-      border-left: 3px solid var(--accent);
-      padding: 16px 20px;
-      margin: 16px 0;
+      background: var(--surface);
+      border-left: 3px solid var(--brand-start);
+      padding: 14px 18px;
+      margin: 14px 0;
       font-size: 14px;
+      border-radius: 0 6px 6px 0;
     }
 
-    .callout strong { color: var(--accent); }
-
-    .callout-dark {
-      background: var(--ink);
-      color: #fff;
-      border-left: none;
-      padding: 20px 24px;
-      margin: 20px 0;
+    .callout.highlight {
+      background: linear-gradient(135deg, rgba(229,50,27,.05), rgba(252,96,48,.05));
+      border-left-color: var(--brand-end);
     }
 
-    .callout-dark strong { color: var(--accent); }
-
-    /* ── CODE-STYLE PATH ── */
+    /* ── PATH ── */
     .path {
-      font-family: 'DM Sans', monospace;
       font-size: 12px;
-      background: rgba(0,0,0,.06);
-      padding: 2px 7px;
-      border-radius: 3px;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      padding: 1px 7px;
+      border-radius: 4px;
+      font-family: ui-monospace, monospace;
     }
 
     /* ── STEPS ── */
-    .steps { list-style: none; counter-reset: steps; margin: 12px 0; }
+    .steps { list-style: none; margin: 12px 0; counter-reset: steps; }
 
     .steps li {
       counter-increment: steps;
-      padding: 12px 0 12px 42px;
+      padding: 10px 0 10px 38px;
       position: relative;
       border-bottom: 1px solid var(--rule);
+      font-size: 14.5px;
     }
+
+    .steps li:last-child { border-bottom: none; }
 
     .steps li::before {
       content: counter(steps);
       position: absolute;
       left: 0;
       top: 12px;
-      width: 26px;
-      height: 26px;
-      background: var(--ink);
+      width: 24px;
+      height: 24px;
+      background: var(--grad);
       color: #fff;
       font-size: 11px;
-      font-weight: 500;
+      font-weight: 600;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 50%;
     }
+
+    a { color: var(--brand-start); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     /* ── FOOTER ── */
     footer {
-      margin-top: 80px;
-      background: var(--ink);
-      color: rgba(255,255,255,.4);
       text-align: center;
-      padding: 36px 24px;
+      padding: 32px 24px;
+      border-top: 1px solid var(--rule);
       font-size: 12px;
-      letter-spacing: .04em;
+      color: var(--ink-muted);
     }
 
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    footer a:hover { text-decoration: underline; }
-
-    footer strong { color: rgba(255,255,255,.7); font-weight: 500; }
-
-    /* ── ANIMATION ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* stagger children */
-    .section:nth-child(1) { animation-delay: .05s; }
-    .section:nth-child(2) { animation-delay: .10s; }
-    .section:nth-child(3) { animation-delay: .15s; }
-    .section:nth-child(4) { animation-delay: .20s; }
-    .section:nth-child(5) { animation-delay: .25s; }
-    .section:nth-child(6) { animation-delay: .30s; }
-    .section:nth-child(7) { animation-delay: .35s; }
-    .section:nth-child(8) { animation-delay: .40s; }
-
-    a { color: var(--accent); }
+    footer a { color: var(--brand-start); }
+    footer strong { color: var(--ink); }
   </style>
 </head>
 <body>
 
-<!-- ── HEADER ── -->
 <header>
-  <div class="header-inner">
-    <div class="app-label">3ala Gamb</div>
-    <h1>Privacy <em>Policy</em></h1>
-    <div class="meta-row">
-      <span>Effective <strong>25 April 2026</strong></span>
-      <span>Last Updated <strong>25 April 2026</strong></span>
-    </div>
-  </div>
+  <div class="app-name">3ala Gamb</div>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective 25 April 2026 &nbsp;·&nbsp; Last Updated 25 April 2026</p>
 </header>
 
 <div class="wrapper">
 
-  <!-- ── TOC ── -->
   <nav class="toc" aria-label="Table of contents">
-    <p class="toc-title">Contents</p>
+    <p class="toc-label">Contents</p>
     <ol>
-      <li><a href="#s1">Introduction</a></li>
-      <li><a href="#s2">Categories of Data Collected</a></li>
-      <li><a href="#s3">GPS and Location Data</a></li>
-      <li><a href="#s4">Data Retention</a></li>
-      <li><a href="#s5">Children's Privacy</a></li>
-      <li><a href="#s6">Security</a></li>
-      <li><a href="#s7">Account Deletion</a></li>
-      <li><a href="#s8">Changes to This Policy</a></li>
+      <li><a href="#s1"><span class="n">01</span> Introduction</a></li>
+      <li><a href="#s2"><span class="n">02</span> Categories of Data Collected</a></li>
+      <li><a href="#s3"><span class="n">03</span> GPS and Location Data</a></li>
+      <li><a href="#s4"><span class="n">04</span> Data Retention</a></li>
+      <li><a href="#s5"><span class="n">05</span> Children's Privacy</a></li>
+      <li><a href="#s6"><span class="n">06</span> Security</a></li>
+      <li><a href="#s7"><span class="n">07</span> Account Deletion</a></li>
+      <li><a href="#s8"><span class="n">08</span> Changes to This Policy</a></li>
     </ol>
   </nav>
 
-  <!-- ── 1. INTRODUCTION ── -->
+  <!-- 1 -->
   <section class="section" id="s1">
-    <span class="section-number">Section 01</span>
-    <h2>Introduction</h2>
-    <p>This Privacy Policy (the "<strong>Policy</strong>") describes how <strong>3ala Gamb</strong> mobile application collects, uses, stores, shares, and protects data of Users in connection with the provision of the 3ala Gamb mobile application and related services (the "<strong>Service</strong>").</p>
+    <h2><span class="num">01</span> Introduction</h2>
+    <p>This Privacy Policy (the "<strong>Policy</strong>") describes how <strong>3ala Gamb</strong> collects, uses, stores, shares, and protects data of Users in connection with the mobile application and related services (the "<strong>Service</strong>").</p>
     <p>This Policy applies to data collected through the 3ala Gamb mobile application for Android and iOS.</p>
     <div class="callout">
       <strong>Please read this Policy carefully.</strong> By using the Service, you acknowledge that you have read and understood this Policy.
     </div>
-    <p>For any question, request, or complaint regarding this Policy please contact <a href="mailto:info@3alagamb.com">info@3alagamb.com</a>.</p>
+    <p>For any question, request, or complaint contact <a href="mailto:info@3alagamb.com">info@3alagamb.com</a>.</p>
   </section>
 
-  <!-- ── 2. CATEGORIES OF DATA ── -->
+  <!-- 2 -->
   <section class="section" id="s2">
-    <span class="section-number">Section 02</span>
-    <h2>Categories of Data Collected</h2>
-    <p>We collect only data strictly necessary to provide the Service and to fulfil the purposes described in this Policy.</p>
+    <h2><span class="num">02</span> Categories of Data Collected</h2>
+    <p>We collect only data strictly necessary to provide the Service.</p>
 
     <h3>2.1 Data You Provide Directly (authenticated users only)</h3>
     <div class="table-wrap">
       <table>
-        <thead>
-          <tr>
-            <th>Data Category</th>
-            <th>Examples</th>
-          </tr>
-        </thead>
+        <thead><tr><th>Data Category</th><th>Examples</th></tr></thead>
         <tbody>
-          <tr>
-            <td>Account data</td>
-            <td>Full name, email address, hashed password</td>
-          </tr>
-          <tr>
-            <td>Profile data</td>
-            <td>Profile picture (optional)</td>
-          </tr>
-          <tr>
-            <td>Favorite locations</td>
-            <td>Up to 3 favourite locations set by you (optional)</td>
-          </tr>
-          <tr>
-            <td>Support communications</td>
-            <td>Content of any email, message, or enquiry you send to us</td>
-          </tr>
+          <tr><td>Account data</td><td>Full name, email address, hashed password</td></tr>
+          <tr><td>Profile data</td><td>Profile picture (optional)</td></tr>
+          <tr><td>Favorite locations</td><td>Up to 3 favourite locations (optional)</td></tr>
+          <tr><td>Support communications</td><td>Content of emails or enquiries sent to us</td></tr>
         </tbody>
       </table>
     </div>
 
     <h3>2.2 Data Stored Locally on Your Device Only</h3>
-    <p>Certain data is stored <strong>exclusively on your device</strong> and is never transmitted to our servers or any third party:</p>
+    <p>The following data is stored <strong>exclusively on your device</strong> and never transmitted to our servers:</p>
     <ul>
       <li><strong>Recent searches</strong> for quick re-selection</li>
       <li><strong>Application preferences</strong> such as language selection</li>
-      <li><strong>Cached map tiles</strong> to maximise app performance</li>
+      <li><strong>Cached map tiles</strong> to maximise performance</li>
     </ul>
-    <p>Because this data does not leave your device, it is cleared when the app is uninstalled or when local storage is cleared through your device settings.</p>
+    <p>This data is cleared when the app is uninstalled or local storage is cleared through device settings.</p>
 
     <h3>2.3 Data from Third-Party Sign-In Providers</h3>
-    <p>If you choose to sign in using Google Sign-In or Apple Sign-In, the applicable provider will transmit to us your email address and full name. We do not receive any additional data about you.</p>
+    <p>If you sign in using Google Sign-In or Apple Sign-In, the provider will share your email address and full name with us. We do not receive any additional data.</p>
 
     <h3>2.4 No Sale of Personal Data</h3>
-    <div class="callout-dark">
-      <strong>We do not, and will never, sell your personal data to any third party.</strong> We do not share your personal data with third parties for those third parties' own marketing or advertising purposes.
+    <div class="callout highlight">
+      <strong>We do not, and will never, sell your personal data to any third party.</strong> We do not share your personal data with third parties for their own marketing or advertising purposes.
     </div>
   </section>
 
-  <!-- ── 3. GPS ── -->
+  <!-- 3 -->
   <section class="section" id="s3">
-    <span class="section-number">Section 03</span>
-    <h2>GPS and Location Data</h2>
-    <p>Because the Service is a public-transport routing application, <strong>location data is central to our functionality</strong>. We want to be as transparent as possible about how we handle it.</p>
+    <h2><span class="num">03</span> GPS and Location Data</h2>
+    <p>Because the Service is a public-transport routing application, <strong>location data is central to its functionality</strong>.</p>
 
     <h3>3.1 When Location is Accessed</h3>
-    <p>3ala Gamb accesses your GPS location <strong>only when the application is open in the foreground</strong>. Your location is never tracked in the background and never when the application is closed.</p>
+    <p>3ala Gamb accesses your GPS location <strong>only when the application is open in the foreground</strong>. Your location is never tracked in the background or when the application is closed.</p>
 
     <h3>3.2 What We Do with Your Location</h3>
     <ul>
-      <li><strong>Displaying the map:</strong> Your current position is shown on the map and used to centre the view.</li>
-      <li><strong>Defaulting the route origin:</strong> Your current position is pre-filled as the origin for a new route search.</li>
-      <li><strong>Computing routes:</strong> The origin and destination coordinates of each route search are sent to our backend to compute public-transport routes.</li>
-      <li><strong>Storing favourite locations:</strong> If you choose to save a favourite location (Home, Work, or Preferred), its coordinates and name are stored in your Account.</li>
+      <li><strong>Displaying the map:</strong> Your position is shown on the map and used to centre the view.</li>
+      <li><strong>Defaulting the route origin:</strong> Your position is pre-filled as the origin for a new route search.</li>
+      <li><strong>Computing routes:</strong> Origin and destination coordinates are sent to our backend to compute transit routes.</li>
+      <li><strong>Storing favourite locations:</strong> If you save a favourite location, its coordinates and name are stored in your Account.</li>
     </ul>
 
     <h3>3.3 How to Revoke Location Permission</h3>
-    <p>You may revoke location permission at any time through your device's operating-system settings:</p>
     <ul>
       <li><strong>Android:</strong> <span class="path">Settings › Apps › 3ala Gamb › Permissions › Location</span></li>
-      <li><strong>iOS:</strong> <span class="path">Settings › Privacy & Security › Location Services › 3ala Gamb</span></li>
+      <li><strong>iOS:</strong> <span class="path">Settings › Privacy &amp; Security › Location Services › 3ala Gamb</span></li>
     </ul>
-    <p>If you revoke location permission, the Service will continue to function but will require you to manually enter or select the origin of each route.</p>
+    <p>If you revoke location permission, the Service will still function but you will need to enter the route origin manually.</p>
   </section>
 
-  <!-- ── 4. DATA RETENTION ── -->
+  <!-- 4 -->
   <section class="section" id="s4">
-    <span class="section-number">Section 04</span>
-    <h2>Data Retention</h2>
+    <h2><span class="num">04</span> Data Retention</h2>
     <p>We retain personal data only for as long as necessary to fulfil the purposes for which it was collected.</p>
-
     <div class="table-wrap">
       <table>
-        <thead>
-          <tr>
-            <th>Data Category</th>
-            <th>Retention Period</th>
-          </tr>
-        </thead>
+        <thead><tr><th>Data Category</th><th>Retention Period</th></tr></thead>
         <tbody>
-          <tr>
-            <td>Account data (name, email, hashed password)</td>
-            <td>For as long as your Account is active, then deleted immediately upon account deletion</td>
-          </tr>
-          <tr>
-            <td>Profile picture</td>
-            <td>For as long as you choose to keep it uploaded, then deleted immediately upon removal or account deletion</td>
-          </tr>
-          <tr>
-            <td>Favourite locations</td>
-            <td>For as long as your Account is active, then deleted immediately upon account deletion</td>
-          </tr>
+          <tr><td>Account data (name, email, hashed password)</td><td>Active while account exists; deleted immediately upon account deletion</td></tr>
+          <tr><td>Profile picture</td><td>Kept while uploaded; deleted immediately upon removal or account deletion</td></tr>
+          <tr><td>Favourite locations</td><td>Active while account exists; deleted immediately upon account deletion</td></tr>
         </tbody>
       </table>
     </div>
 
     <h3>4.1 Anonymisation on Account Deletion</h3>
-    <p>When you delete your Account, we proceed by <strong>immediately and permanently</strong> deleting all personal identifiers — name, email, hashed password, profile photo, and favourite locations — in compliance with your right to erasure.</p>
+    <p>When you delete your Account, we <strong>immediately and permanently</strong> delete all personal identifiers — name, email, hashed password, profile photo, and favourite locations.</p>
   </section>
 
-  <!-- ── 5. CHILDREN ── -->
+  <!-- 5 -->
   <section class="section" id="s5">
-    <span class="section-number">Section 05</span>
-    <h2>Children's Privacy</h2>
+    <h2><span class="num">05</span> Children's Privacy</h2>
     <div class="callout">
       The Service is <strong>not intended for, and is not directed at, children under thirteen (13) years of age</strong>.
     </div>
   </section>
 
-  <!-- ── 6. SECURITY ── -->
+  <!-- 6 -->
   <section class="section" id="s6">
-    <span class="section-number">Section 06</span>
-    <h2>Security of Your Personal Data</h2>
-    <p>We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, unlawful processing, accidental loss, destruction, and damage:</p>
+    <h2><span class="num">06</span> Security of Your Personal Data</h2>
+    <p>We implement appropriate technical and organisational measures to protect your personal data:</p>
     <ul>
-      <li><strong>Encryption in transit:</strong> All communications between the application and our backend use HTTPS/TLS.</li>
-      <li><strong>Encryption at rest:</strong> Databases and file storage on our backend are encrypted at rest.</li>
-      <li><strong>Access controls:</strong> Access to production systems is restricted on a need-to-know basis and requires strong authentication.</li>
-      <li><strong>Password hashing:</strong> User passwords are stored using industry-standard hashing algorithms and are never stored in plain text.</li>
+      <li><strong>Encryption in transit:</strong> All communications use HTTPS/TLS.</li>
+      <li><strong>Encryption at rest:</strong> Databases and file storage are encrypted at rest.</li>
+      <li><strong>Access controls:</strong> Production access is restricted on a need-to-know basis with strong authentication.</li>
+      <li><strong>Password hashing:</strong> Passwords are stored using industry-standard hashing and never in plain text.</li>
     </ul>
-    <p>Despite these measures, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security. In the event of a personal data breach likely to result in a risk to your rights and freedoms, we will notify you and the competent supervisory authority within the timeframes required by applicable law.</p>
+    <p>No method of internet transmission is 100% secure. In the event of a breach likely to affect your rights, we will notify you and the competent supervisory authority within the timeframes required by applicable law.</p>
   </section>
 
-  <!-- ── 7. ACCOUNT DELETION ── -->
+  <!-- 7 -->
   <section class="section" id="s7">
-    <span class="section-number">Section 07</span>
-    <h2>Account Deletion</h2>
+    <h2><span class="num">07</span> Account Deletion</h2>
     <p>You may delete your Account at any time by either:</p>
     <ol class="steps">
-      <li>Using the in-application account deletion function: <span class="path">Profile › Delete Account</span></li>
+      <li>Using the in-app deletion function: <span class="path">Profile › Delete Account</span></li>
       <li>Sending a written request to <a href="mailto:info@3alagamb.com">info@3alagamb.com</a></li>
     </ol>
-    <div class="callout-dark">
-      Account deletion is <strong>immediate and permanent</strong>. Your name, email, hashed password, profile photograph, and favourite locations are permanently deleted from our active systems. You may continue to use the Service as a Guest User if you wish.
+    <div class="callout highlight" style="margin-top:16px;">
+      Account deletion is <strong>immediate and permanent</strong>. All personal identifiers are removed from our active systems. You may continue using the Service as a Guest User.
     </div>
   </section>
 
-  <!-- ── 8. CHANGES ── -->
+  <!-- 8 -->
   <section class="section" id="s8">
-    <span class="section-number">Section 08</span>
-    <h2>Changes to This Policy</h2>
-    <p>We may update this Policy from time to time to reflect changes in law, technology, our business practices, or user feedback. When we do:</p>
+    <h2><span class="num">08</span> Changes to This Policy</h2>
+    <p>We may update this Policy to reflect changes in law, technology, or our business practices. When we do:</p>
     <ul>
-      <li>We will update the "Last Updated" date at the top of this Policy.</li>
-      <li>We will publish the updated Policy on our website at <a href="https://3alagamb.com" target="_blank" rel="noopener">3alagamb.com</a>.</li>
-      <li>Where the changes are material, we will provide additional notice by email and, where required by applicable law, seek your renewed consent.</li>
+      <li>The "Last Updated" date at the top of this Policy will be updated.</li>
+      <li>The updated Policy will be published at <a href="https://3alagamb.com" target="_blank" rel="noopener">3alagamb.com</a>.</li>
+      <li>For material changes, we will notify you by email and seek renewed consent where required by law.</li>
     </ul>
-    <p>Your continued use of the Service after the effective date of the updated Policy constitutes your acknowledgement of the updated Policy.</p>
+    <p>Continued use of the Service after the effective date constitutes acknowledgement of the updated Policy.</p>
   </section>
 
-</div><!-- /wrapper -->
+</div>
 
-<!-- ── FOOTER ── -->
 <footer>
   <p><strong>3ala Gamb</strong> &nbsp;·&nbsp; Cairo Public Transit Application</p>
-  <p style="margin-top:8px;">Questions? <a href="mailto:info@3alagamb.com">info@3alagamb.com</a></p>
-  <p style="margin-top:16px; font-size:11px;">Document prepared 25 April 2026</p>
+  <p style="margin-top:6px;">Questions? <a href="mailto:info@3alagamb.com">info@3alagamb.com</a></p>
+  <p style="margin-top:12px; font-size:11px;">Document prepared 25 April 2026</p>
 </footer>
 
 </body>
